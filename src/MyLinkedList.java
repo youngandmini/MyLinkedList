@@ -11,6 +11,7 @@ public class MyLinkedList<E> implements Iterable<E> {
     /**
      * 생성자
      */
+    @SuppressWarnings("unchecked")
     public MyLinkedList() {
         this.listArray = (E[]) new Object[max_size];
     }
@@ -23,6 +24,10 @@ public class MyLinkedList<E> implements Iterable<E> {
         return nextIndex;
     }
 
+    /**
+     * 기존 배열의 크기의 두배로 늘린 새로운 배열을 만들고 값 복사
+     */
+    @SuppressWarnings("unchecked")
     private void doubleArray() {
         max_size *= 2;
         E[] newListArray = (E[]) new Object[max_size];
@@ -32,7 +37,7 @@ public class MyLinkedList<E> implements Iterable<E> {
 
     /**
      * 새로운 데이터를 리스트의 맨 뒤에 삽입
-     * @param data
+     * @param data: 추가할 데이터
      */
     public void add(E data) {
         listArray[nextIndex] = data;
@@ -46,7 +51,7 @@ public class MyLinkedList<E> implements Iterable<E> {
 
     /**
      * 해당 인덱스에 있는 데이터를 가져옴
-     * @param index
+     * @param index: 찾고 싶은 데이터의 index
      * @return data
      */
     public E get(int index) {
@@ -58,7 +63,7 @@ public class MyLinkedList<E> implements Iterable<E> {
 
     /**
      * 해당 인덱스에 있는 데이터를 삭제
-     * @param index
+     * @param index: 삭제하고 싶은 데이터의 index
      */
     public void delete(int index) {
 
