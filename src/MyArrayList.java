@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class MyArrayList<E> implements Iterable<E> {
+public class MyArrayList<E> implements MyList<E>, Iterable<E> {
 
     private int max_size = 10;
     private int nextIndex = 0;
