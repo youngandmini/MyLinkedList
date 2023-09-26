@@ -1,7 +1,6 @@
 import java.util.Iterator;
 
-public class MyLinkedList<E> implements Iterable<E> {
-
+public class MyArrayList<E> implements Iterable<E> {
 
     private int max_size = 10;
     private int nextIndex = 0;
@@ -12,7 +11,7 @@ public class MyLinkedList<E> implements Iterable<E> {
      * 생성자
      */
     @SuppressWarnings("unchecked")
-    public MyLinkedList() {
+    public MyArrayList() {
         this.listArray = (E[]) new Object[max_size];
     }
 

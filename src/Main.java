@@ -3,7 +3,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MyLinkedList<Integer> myList = new MyLinkedList<>();
+        MyArrayList<Integer> myList = new MyArrayList<>();
 
         for (int i = 0; i < 20; i++) {
             myList.add(i);

@@ -1,7 +1,7 @@
 
 public class MyStack<E> {
 
-    private final MyLinkedList<E> myLinkedList = new MyLinkedList<>();
+    private final MyArrayList<E> myLinkedList = new MyArrayList<>();
 
     public void push(E data) {
 

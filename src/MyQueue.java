@@ -4,7 +4,7 @@ public class MyQueue<E> {
     private int end = 0;
 
 
-    private final MyLinkedList<E> myLinkedList = new MyLinkedList<>();
+    private final MyArrayList<E> myLinkedList = new MyArrayList<>();
 
     public void enqueue(E data) {
         myLinkedList.add(data);
