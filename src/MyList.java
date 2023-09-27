@@ -5,4 +5,6 @@ public interface MyList<E> extends Iterable<E> {
     E get(int index);
 
     void delete(int index);
+
+    int size();
 }

@@ -19,6 +19,7 @@ public class MyArrayList<E> implements MyList<E> {
      * 리스트에 현재 들어있는 요소의 개수를 반환
      * @return size of List
      */
+    @Override
     public int size() {
         return nextIndex;
     }
@@ -38,6 +39,7 @@ public class MyArrayList<E> implements MyList<E> {
      * 새로운 데이터를 리스트의 맨 뒤에 삽입
      * @param data: 추가할 데이터
      */
+    @Override
     public void add(E data) {
         listArray[nextIndex] = data;
         nextIndex++;
@@ -53,6 +55,7 @@ public class MyArrayList<E> implements MyList<E> {
      * @param index: 찾고 싶은 데이터의 index
      * @return data
      */
+    @Override
     public E get(int index) {
         if (index >= nextIndex) {
             throw new ArrayIndexOutOfBoundsException("리스트의 범위를 벗어났습니다.");
@@ -64,6 +67,7 @@ public class MyArrayList<E> implements MyList<E> {
      * 해당 인덱스에 있는 데이터를 삭제
      * @param index: 삭제하고 싶은 데이터의 index
      */
+    @Override
     public void delete(int index) {
 
         if (index >= nextIndex) {
@@ -81,11 +85,12 @@ public class MyArrayList<E> implements MyList<E> {
      */
     @Override
     public Iterator<E> iterator() {
-        return new MyListIterator();
+
+        return new MyArrayListIterator();
     }
 
 
-    private class MyListIterator implements Iterator<E> {
+    private class MyArrayListIterator implements Iterator<E> {
         private int nowIndex = 0;
 
         @Override

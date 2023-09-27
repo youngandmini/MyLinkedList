@@ -1,20 +1,20 @@
 
 public class MyStack<E> {
 
-    private final MyArrayList<E> myLinkedList = new MyArrayList<>();
+    private final MyList<E> myList = new MyLinkedList<>();
 
     public void push(E data) {
 
-        myLinkedList.add(data);
+        myList.add(data);
     }
 
     public E pop() {
-        if (myLinkedList.size() == 0) {
+        if (myList.size() == 0) {
             throw new RuntimeException("스택이 비어있습니다");
         }
 
-        E returnData = myLinkedList.get(myLinkedList.size()-1);
-        myLinkedList.delete(myLinkedList.size()-1);
+        E returnData = myList.get(myList.size()-1);
+        myList.delete(myList.size()-1);
 
         return returnData;
     }

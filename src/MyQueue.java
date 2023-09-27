@@ -4,10 +4,10 @@ public class MyQueue<E> {
     private int end = 0;
 
 
-    private final MyArrayList<E> myLinkedList = new MyArrayList<>();
+    private final MyList<E> myList = new MyLinkedList<>();
 
     public void enqueue(E data) {
-        myLinkedList.add(data);
+        myList.add(data);
         end++;
     }
 
@@ -18,7 +18,7 @@ public class MyQueue<E> {
             throw new RuntimeException("큐가 비어있습니다");
         }
 
-        return myLinkedList.get(first++);
+        return myList.get(first++);
     }
 
 }
